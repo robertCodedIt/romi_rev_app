@@ -1,0 +1,73 @@
+## Social Network Features
+- Ephemeral Stories
+- Adding new stories
+- Viewing friends’ stories
+- Instagram-style interactive story viewer
+- Disappearing after 24h (adjustable)
+- Photo & Video formats
+- Posts / News Feed
+- Create new post
+- Text, Photo and Video formats
+- Multi photo support / Carousel
+- Check ins (with location picker)
+- Chronological Timeline / News Feed
+- Discover/Explore feed
+- Mute/Unmute videos
+- Autoplay in-feed videos
+- Hashtags
+- Mentions / Tags
+- Comments
+- Reactions (Facebook style)
+- React
+- Undo reaction
+- Automatic realtime reactions count
+- Friendships
+- Add new friend
+- Accept friend request
+- Friends’ list
+- Search friends
+- Chat
+- 1-1 Chat
+- Group Chat
+- Photo Messaging
+- Audio Messages (Recordings)
+- Video Messaging
+- Push Notifications & Badges
+- In-Reply to feature
+- Online status indicator
+- Seen Status
+- Facepile Seen Status for Groups
+- Unread Messages
+- Clickable URLs
+- Emojis
+- Full screen photo viewer
+- Push Notifications & Badges
+- Localization, RTL & Multi-language support
+- Photos & Videos
+- Monetization
+- Facebook Ads (Facebook Audience Network)
+- In-feed native ads
+- Interstitial ads
+- Profiles
+- User Management
+- Login with Facebook
+- Login with Email & Password
+- Phone Auth with SMS (OTP)
+- Sign-in with Apple
+- Country code picker
+- Registration with Phone, Email, Apple or Facebook
+- Logout
+- Save Password functionality
+- Reset Password
+- Walkthrough onboarding flow
+- Backend System (Firebase)
+- Firebase Auth
+- Firebase Firestore Database
+- Firebase Storage
+- Firebase Cloud Messaging
+- Performance & Growth Optimizations
+- High conversion onboarding screens
+- Remember password
+- Image & Video Caching
+- Optimized image downloading
+- Scroll performance improvements
