@@ -1,44 +1,27 @@
 'use strict';
+
 require('dotenv').config();
-const app = require('express')();
+
+const cookieParser = require('cookie-parser');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const express = require('express')
+const app=express();
+app.use(express.json());
+app.use(cors())
+app.use(cookieParser())
+
+
 const port = process.env.PORT|| 3001;
 const route_one = require('./routes/user.js');
 // DATABASE CONNECTION
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = process.env.DB_CONNECTION_STRING;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(err => {
-  console.log('database is connected')
-  const collection = client.db("test").collection("devices");
-  console.log(collection)
-  // perform actions on the collection object
-  client.close();
-});
-
-
-
+const connectDB = require("./db");
+connectDB()
 // routes
-app.use('/users',route_one)
-// app.use('/users',route_one)
-// app.use('/users',route_one)
-// app.use('/users',route_one)
-// app.use('/users',route_one)
-// models
-class User {
-constructor(name,age,birthday,sign){
-this.name = name;
-this.age = age;
-this.birthday = birthday;
-this.sign = sign;
-}
-
-}
-
-let data = new User('Robert',24,'7/25/1997','leo')
-app.get('/',(req,res)=>{
-    res.send([data])
-    console.log(data)
-})
+const{adminAuth,userAuth}=require('./middleware/auth');
+app.get('/admin',adminAuth,(req,res)=>res.send("admin Route"))
+app.get('/basic',userAuth,(req,res)=>res.send("user Route"))
+app.use("/api/auth",require('./auth/Route'))
 
 app.listen(port,()=>{
     console.log('listening on port:', port)
